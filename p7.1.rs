@@ -17,7 +17,7 @@ fn main() {
 
     println!("Из {:.3} и {:.3} больше {:.3}", float_dig1, float_dig2, max_dig3);    
 
-     let int_dig1:i32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
+    let int_dig1:i32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
     let int_dig2:i32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");  
 
     if int_dig1%2 == 0 { println!("Число {} является четным", int_dig1); }

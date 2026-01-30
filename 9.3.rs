@@ -3,14 +3,14 @@ use std::io::stdin;
 fn main() {
     let mut number:i8 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
     let radix:u8 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
-    /*println!("x до установки {}-го бита", radix);
+   /*  println!("x до установки {}-го бита", radix);
     println!("в двоичной записи: {:08b}", number);
     println!("в десятичной записи: {}", number);
     number |= 1 << radix;
     println!("");
     println!("x после установки {}-го бита", radix);
     println!("в двоичной записи: {:08b}", number);
-    println!("в десятичной записи: {}", number);
+    println!("в десятичной записи: {}", number);*/
 
     println!("x до очистки {}-го бита", radix);
     println!("в двоичной записи: {:08b}", number);
@@ -18,16 +18,6 @@ fn main() {
     number &= !(1 << radix);
     println!("");
     println!("x после очистки {}-го бита", radix);
-    println!("в двоичной записи: {:08b}", number);
-    println!("в десятичной записи: {}", number);*/
-
-    println!("x до переключения {}-го бита", radix);
-    println!("в двоичной записи: {:08b}", number);
-    println!("в десятичной записи: {}", number);
-    if (number & (1 << radix)) != 0 {   number &= !(1 << radix); }
-    else {  number |= 1 << radix; }
-    println!("");
-    println!("x после переключения {}-го бита", radix);
     println!("в двоичной записи: {:08b}", number);
     println!("в десятичной записи: {}", number);
 }   
