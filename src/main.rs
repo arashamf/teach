@@ -1,33 +1,62 @@
 use std::io::stdin;
-
+//use std::io;
 fn main() {
-    let mut number:i8 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
-    let radix:u8 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
-    /*println!("x до установки {}-го бита", radix);
-    println!("в двоичной записи: {:08b}", number);
-    println!("в десятичной записи: {}", number);
-    number |= 1 << radix;
-    println!("");
-    println!("x после установки {}-го бита", radix);
-    println!("в двоичной записи: {:08b}", number);
-    println!("в десятичной записи: {}", number);
+   /*  let mut input_string = String::new();
+    std::io::stdin().read_line(&mut input_string).expect("");
+    let number:u8 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
+    for count in 0..=number   {
+        println!("{},{}",input_string.trim(), count);       
+    }
+    let mut in_str = String::new();
+    std::io::stdin().read_line(&mut in_str).expect("");
+    let start:u32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
+    let end:u32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
 
-    println!("x до очистки {}-го бита", radix);
-    println!("в двоичной записи: {:08b}", number);
-    println!("в десятичной записи: {}", number);
-    number &= !(1 << radix);
-    println!("");
-    println!("x после очистки {}-го бита", radix);
-    println!("в двоичной записи: {:08b}", number);
-    println!("в десятичной записи: {}", number);*/
+    for _ in start..end {
+        println!("{}", in_str.trim());
+    }
+    let end:u32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
+    for count in 0..end {
+        println!("{}", count);
+    }
 
-    println!("x до переключения {}-го бита", radix);
-    println!("в двоичной записи: {:08b}", number);
-    println!("в десятичной записи: {}", number);
-    if (number & (1 << radix)) != 0 {   number &= !(1 << radix); }
-    else {  number |= 1 << radix; }
-    println!("");
-    println!("x после переключения {}-го бита", radix);
-    println!("в двоичной записи: {:08b}", number);
-    println!("в десятичной записи: {}", number);
-}   
+    let mut in_str = String::new();
+    std::io::stdin().read_line(&mut in_str).expect("");
+    let end:u32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
+
+    for count in 0..end {
+        println!("{}: {}", count,in_str.trim());
+    }
+    let mut start:i32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
+    let mut end:i32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
+    if start > end {    (start, end) = (end, start);    } //Деструктуризация кортежа 
+    let mut sum: i32 = 0;
+     for count in start..end {
+        println!("{} * 2 = {}", count, count<<1);
+    }
+    for count in start..end {
+        sum +=count;
+    }
+    println!("{}", sum);
+     for count in start..=end {
+        println!("{}", count);
+    }
+    for count in start..=end {
+        println!("{}", count*count);
+    }*/
+    let numb:u32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
+    /*let mut factorial:u32 = 1;
+    for count in 1..=numb {
+        factorial *= count;
+    }
+    println!("Факториал числа {} равен: {}", numb, factorial);*/
+    let mut prev_fib:u32 = 0;
+    let mut curr_fib:u32 = 1;
+    println!("Последовательность Фибоначчи для {} элементов:",numb);
+    if numb > 0   {
+        for _ in 0..numb {
+            println!("{}",prev_fib);
+            (prev_fib, curr_fib) = (curr_fib, prev_fib+curr_fib); 
+        }
+    }
+}  

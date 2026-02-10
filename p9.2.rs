@@ -1,7 +1,7 @@
 use std::io::stdin;
 
 fn main() {
-    /*let mut array:[i32; 5] = [1, 2, 3, 4, 5];
+    let mut array:[i32; 5] = [1, 2, 3, 4, 5];
     let number:i32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
     array[0] += number;
     array[1] -= number;
@@ -45,7 +45,7 @@ fn main() {
     let mut number:u64 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
     let radix:u8 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
     number *= 1 << radix;
-    println!("{}", number);*/
+    println!("{}", number);
 
     let mut number:u32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
     let radix:u8 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
