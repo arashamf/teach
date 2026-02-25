@@ -2,8 +2,7 @@ use std::io::stdin;
 use std::io;
 
 fn main() {
-
-   let numb_month:usize = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
+    let numb_month:usize = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
     let year = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
     if numb_month < 13  && numb_month > 0

@@ -1,8 +1,8 @@
 use std::io::stdin;
 
 fn main() {
-     let number:i8 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
-     let mut radix:u8 = 0;
+    let number:i8 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
+    let mut radix:u8 = 0;
     if  number != 0  {
         for count in 0..8   {
             if number & (0x01  << count) != 0   {

@@ -1,62 +1,47 @@
 use std::io::stdin;
-//use std::io;
+use std::io;
 fn main() {
-   /*  let mut input_string = String::new();
-    std::io::stdin().read_line(&mut input_string).expect("");
-    let number:u8 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
-    for count in 0..=number   {
-        println!("{},{}",input_string.trim(), count);       
-    }
-    let mut in_str = String::new();
-    std::io::stdin().read_line(&mut in_str).expect("");
-    let start:u32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
-    let end:u32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
-
-    for _ in start..end {
-        println!("{}", in_str.trim());
-    }
-    let end:u32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
-    for count in 0..end {
-        println!("{}", count);
-    }
-
-    let mut in_str = String::new();
-    std::io::stdin().read_line(&mut in_str).expect("");
-    let end:u32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
-
-    for count in 0..end {
-        println!("{}: {}", count,in_str.trim());
-    }
-    let mut start:i32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
-    let mut end:i32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
-    if start > end {    (start, end) = (end, start);    } //Деструктуризация кортежа 
-    let mut sum: i32 = 0;
-     for count in start..end {
-        println!("{} * 2 = {}", count, count<<1);
-    }
-    for count in start..end {
-        sum +=count;
-    }
-    println!("{}", sum);
-     for count in start..=end {
-        println!("{}", count);
-    }
-    for count in start..=end {
-        println!("{}", count*count);
-    }*/
-    let numb:u32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
-    /*let mut factorial:u32 = 1;
-    for count in 1..=numb {
-        factorial *= count;
-    }
-    println!("Факториал числа {} равен: {}", numb, factorial);*/
-    let mut prev_fib:u32 = 0;
-    let mut curr_fib:u32 = 1;
-    println!("Последовательность Фибоначчи для {} элементов:",numb);
-    if numb > 0   {
-        for _ in 0..numb {
-            println!("{}",prev_fib);
-            (prev_fib, curr_fib) = (curr_fib, prev_fib+curr_fib); 
+    /*let mut number:f64 =0.0;
+    loop {
+        number = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");  
+        if number <= 0.0 {  continue;  }
+        else {  
+            println!("{number}");
+            break;  
         }
     }
-}  
+    let number:u32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");  
+    let mut tmp:u32 = number;
+    let mut handle:usize = 0;
+    let mut prev:u32;
+    let mut flag:bool = true;
+    let mut series = vec![0; 15];
+    while tmp > 0 {
+        series[handle] = tmp % 10;
+        tmp /= 10;
+        handle += 1;
+    }
+    prev = series[0];
+    for count in 1..handle {
+        if prev <= series[count] {
+            flag = false;
+            break;
+        }
+        else {  prev = series[count]; }
+    }
+
+    if flag == true {    println!("Цифры числа {} расположены по возрастанию", number);      }
+    else            {    println!("Цифры числа {} не расположены по возрастанию", number);   }*/
+
+    let mut number:i32 = 1;
+    let mut sum_plus = 0;
+    let mut sum_minus = 0;
+
+    while number != 0  { 
+        number = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");  
+        if number >0 {  sum_plus += number; }
+        else { sum_minus += number; }
+    }
+    println!("Сумма отрицательных чисел: {}", sum_minus);
+    println!("Сумма положительных чисел: {}", sum_plus);
+} 
