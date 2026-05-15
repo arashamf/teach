@@ -3,5 +3,14 @@
 version = 4
 
 [[package]]
+name = "lcg-rand"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "20ca4c746dc692bb7ea79d351bcfdce139f77bd24b5d65b9dbaa94f2d6b6fe71"
+
+[[package]]
 name = "teach"
 version = "0.1.0"
+dependencies = [
+ "lcg-rand",
+]

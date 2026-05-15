@@ -1,9 +1,7 @@
 use std::io::stdin;
 
 fn main() {
-    /* 
    let mut number:u16=123;
-
    while number < 322 {
         let i = number % 10;
         let j = (number / 10)%10;

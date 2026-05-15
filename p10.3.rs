@@ -55,12 +55,10 @@ fn main() {
         divider *= 10000;
     }
     if sum %10 == 0  {   println!("Карта с номером {:04} {:04} {:04} {:04} действительна",card_number[3],card_number[2],card_number[1],card_number[0]); }
-    else {   println!("Карты с номером {:04} {:04} {:04} {:04} не существует",card_number[3],card_number[2],card_number[1],card_number[0]);  }
+    else             {   println!("Карты с номером {:04} {:04} {:04} {:04} не существует",card_number[3],card_number[2],card_number[1],card_number[0]); }
     let start:i32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
     let end:i32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");
-    for count in start..end  {
-        print!("{} | ", count);
-    }
+    for count in start..end  {  print!("{} | ", count); }
     println!("{}", end);
 
     let number:i32 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");

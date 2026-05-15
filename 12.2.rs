@@ -25,12 +25,12 @@ fn main() {
     input();
 }
 
-/*fn input() {
+fn input() {
     let tax_rate:f64 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");  
     let veh_pow:u16 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");  
     let period:u8 = stdin().lines().next().unwrap().unwrap().parse().expect("wrong input");  
     calc_tax(tax_rate,veh_pow,period);
-}*/
+}
 
 fn calc_tax(tax_rate: f64,veh_pow: u16,own_per: u8) {
     print_tax(tax_rate*(veh_pow as f64)*(own_per as f64/12.0));
